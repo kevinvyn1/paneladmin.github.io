@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Panel — Login</title>
+  <link rel="stylesheet" href="assets/styles.css"/>
+  <script defer src="https://www.gstatic.com/firebasejs/10.12.3/firebase-app-compat.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/10.12.3/firebase-auth-compat.js"></script>
+  <script defer src="assets/config.js"></script>
+  <script defer src="assets/app.js"></script>
+</head>
+<body class="bg">
+  <div class="card login-card">
+    <h1 class="title">Admin Panel</h1>
+    <p class="subtitle">Masuk untuk melanjutkan</p>
+    <form id="loginForm">
+      <label>Username</label>
+      <input id="username" type="text" placeholder="mis. adminis" autocomplete="username" required />
+      <label>Password</label>
+      <input id="password" type="password" placeholder="••••••••" autocomplete="current-password" required />
+      <label class="remember">
+        <input id="remember" type="checkbox" />
+        <span>Ingat login (24 jam)</span>
+      </label>
+      <button type="submit" class="btn">Masuk</button>
+      <div id="loginMsg" class="msg"></div>
+    </form>
+  </div>
+</body>
+</html>

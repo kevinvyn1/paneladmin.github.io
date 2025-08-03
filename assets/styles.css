@@ -1,0 +1,84 @@
+/* Tema: merah gradient + hitam */
+:root{
+  --red: #ff2a2a;
+  --red2:#b00018;
+  --dark:#0a0a0a;
+  --card:#141414;
+  --text:#f1f1f1;
+  --muted:#b9b9b9;
+  --accent:#ff4949;
+  --ok:#19c37d;
+  --warn:#ffb020;
+  --max:1100px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,'Noto Sans',sans-serif;color:var(--text)}
+
+.bg{
+  min-height:100vh;
+  background:
+    radial-gradient(60rem 30rem at 10% -10%, rgba(255,0,0,.18), transparent 60%),
+    radial-gradient(60rem 30rem at 90% 110%, rgba(139,0,0,.18), transparent 60%),
+    linear-gradient(180deg, #120307 0%, #000 100%);
+}
+
+.card{
+  background:linear-gradient(180deg, rgba(255,0,0,.06), transparent 50%), var(--card);
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:18px;
+  box-shadow:0 10px 40px rgba(0,0,0,.35);
+}
+
+.login-card{
+  width:min(420px, 92vw);
+  margin:8vh auto;
+  padding:28px;
+}
+
+.title{font-size:1.8rem;font-weight:800;margin-bottom:6px}
+.subtitle{color:var(--muted);margin-bottom:20px}
+
+label{display:block;margin:14px 0 6px}
+input[type="text"], input[type="password"]{
+  width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.1);
+  background:#0a0a0a;color:var(--text);outline:none;
+}
+input[type="text"]:focus, input[type="password"]:focus{border-color:var(--accent)}
+
+.remember{display:flex;gap:10px;align-items:center;margin:10px 0 14px;color:var(--muted)}
+.btn{
+  background:linear-gradient(180deg, var(--red) 0%, var(--red2) 100%);
+  border:none;color:white;padding:12px 16px;border-radius:12px;font-weight:700;cursor:pointer;
+  box-shadow:0 6px 18px rgba(255,0,0,.18);
+}
+.btn:hover{filter:brightness(1.05)}
+.btn.small{padding:8px 12px;border-radius:10px;font-weight:700}
+
+.msg{margin-top:10px;color:var(--muted)}
+
+.topbar{
+  position:sticky;top:0;display:flex;justify-content:space-between;align-items:center;gap:10px;
+  padding:12px 18px;background:rgba(0,0,0,.55);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.06);
+}
+.brand{font-weight:900;letter-spacing:.5px}
+.userbox{display:flex;gap:8px;align-items:center}
+
+.container{display:grid;grid-template-columns:220px 1fr;gap:16px;max-width:var(--max);margin:20px auto;padding:0 12px}
+.sidebar{display:flex;flex-direction:column;gap:8px}
+.menu{padding:12px 14px;border-radius:12px;text-decoration:none;color:var(--text);border:1px solid rgba(255,255,255,.05);background:rgba(255,255,255,.02)}
+.menu.active,.menu:hover{border-color:rgba(255,0,0,.35)}
+
+.content{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:16px}
+.section{display:none}
+.section.active{display:block}
+
+.table-wrap{overflow:auto;border-radius:12px;border:1px solid rgba(255,255,255,.06)}
+table{width:100%;border-collapse:collapse}
+th,td{padding:10px 12px;border-bottom:1px solid rgba(255,255,255,.06);font-size:.95rem}
+thead th{position:sticky;top:0;background:#0d0d0d;z-index:1}
+tbody tr:nth-child(even){background:rgba(255,255,255,.02)}
+
+.form-grid{display:grid;grid-template-columns:160px 1fr;gap:10px;align-items:center;max-width:700px}
+.form-grid input{padding:10px 12px;border-radius:10px;border:1px solid rgba(255,255,255,.12);background:#0a0a0a;color:var(--text)}
+.form-grid .btn{grid-column:2}
